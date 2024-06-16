@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" id="btn" maxlength="10">
+    <div id="remainingChars">Characters remaining-- 10</div>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").on("input", function(){
+                var remaining = 10 - $(this).val().length;
+                $("#remainingChars").text("Characters remaining: " + remaining);
+                if (remaining >= 0) {
+                    $("#button").prop("disabled", false);
+                } else {
+                    $("#button").prop("disabled", true);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

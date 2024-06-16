@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yellow{
+            background-color: rgb(220, 220, 48);
+        }
+        body{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .btn{
+            background: #5123;
+            border-radius: 20px;
+            border: none;
+            padding: 10px 20px;
+        }
+        #text{
+            color: red;
+            font-size: 3rem;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body id="body">
+    <div>
+    <h2 id="text"></h2>
+    <button class="btn" onclick="run()">Start</button>
+    <button class="btn" onclick="stop()">Stop</button>
+    </div>
+    <script>
+        const text = document.getElementById("text");
+        const body = document.getElementById("body");
+        let id;
+        const run = () => {
+             id=setInterval(()=>{text.innerText=Date();},1000)
+             body.classList.add('yellow')
+             alert("Started")
+
+        }
+        const stop=()=>{
+            clearInterval(id)
+            text.innerText="";
+            alert("Stopped")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Quiz!!!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f88c8cad;
+        }
+
+        .question-container {
+            background-color: #8bfffdad;
+            border: 1px solid #0d0c0c;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .option {
+            margin-bottom: 8px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #cf3d32;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+
+    .option {
+        margin-bottom: 8px;
+        transition: background-color 0.3s; 
+    }
+
+    .option:hover {
+        background-color: #f2f2f2; 
+    }
+    .score {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .timer {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #tryAgainBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #tryAgainBtn:hover {
+            background-color: #91eda5d8;
+        }
+
+        @media (max-width: 600px) {
+            
+            body {
+                padding: 10px;
+            }
+
+            .question-container {
+                padding: 10px;
+            }
+        }
+
+
+    
+</style>
+
+  
+</head>
+<body>
+    <h1>Multiple Choice Quiz</h1>
+    <form id="quizForm">
+    
+    <div class="question-container">
+        <div class="question">1. What is the capital of France?</div>
+        <div class="option"><input type="radio" name="q1" value="a"> a) Berlin</div>
+        <div class="option"><input type="radio" name="q1" value="b"> b) London</div>
+        <div class="option"><input type="radio" name="q1" value="c"> c) Rome</div>
+        <div class="option"><input type="radio" name="q1" value="d"> d) Rome</div>
+    </div>
+    <div class="question-container">
+        <div class="question">2. What is the capital of India?</div>
+        <div class="option"><input type="radio" name="q2" value="a"> a) Berlin</div>
+        <div class="option"><input type="radio" name="q2" value="b"> b) London</div>
+        <div class="option"><input type="radio" name="q2" value="c"> c) Delhi</div>
+        <div class="option"><input type="radio" name="q2" value="d"> d) Rome</div>
+    </div>
+    <div class="question-container">
+        <div class="question">3. What is the capital of Canada?</div>
+        <div class="option"><input type="radio" name="q3" value="a"> a) Berlin</div>
+        <div class="option"><input type="radio" name="q3" value="b"> b) London</div>
+        <div class="option"><input type="radio" name="q3" value="c"> c) Ottawa</div>
+        <div class="option"><input type="radio" name="q3" value="d"> d) Rome</div>
+    </div>
+    <div class="question-container">
+        <div class="question">4. What is the national bird of India?</div>
+        <div class="option"><input type="radio" name="q4" value="a"> a) Ostrich</div>
+        <div class="option"><input type="radio" name="q4" value="b"> b) Bird</div>
+        <div class="option"><input type="radio" name="q4" value="c"> c) Peacock</div>
+        <div class="option"><input type="radio" name="q4" value="d"> d) Sparrow</div>
+    </div>
+    <div class="question-container">
+        <div class="question">5. What is the capital of Canada?</div>
+        <div class="option"><input type="radio" name="q5" value="a"> a) Berlin</div>
+        <div class="option"><input type="radio" name="q5" value="b"> b) London</div>
+        <div class="option"><input type="radio" name="q5" value="c"> c) Ottawa</div>
+        <div class="option"><input type="radio" name="q5" value="d"> d) Rome</div>
+    </div>
+    <div class="question-container">
+        <div class="question">6. What is the capital of Canada?</div>
+        <div class="option"><input type="radio" name="q6" value="a"> a) Berlin</div>
+        <div class="option"><input type="radio" name="q6" value="b"> b) London</div>
+        <div class="option"><input type="radio" name="q6" value="c"> c) Ottawa</div>
+        <div class="option"><input type="radio" name="q6" value="d"> d) Rome</div>
+    </div>
+    <div class="question-container">
+        <div class="question">7. What is the capital of Canada?</div>
+        <div class="option"><input type="radio" name="q7" value="a"> a) Berlin</div>
+        <div class="option"><input type="radio" name="q7" value="b"> b) London</div>
+        <div class="option"><input type="radio" name="q7" value="c"> c) Ottawa</div>
+        <div class="option"><input type="radio" name="q7" value="d"> d) Rome</div>
+    </div>
+    <div class="question-container">
+        <div class="question">8. What is the capital of Canada?</div>
+        <div class="option"><input type="radio" name="q8" value="a"> a) Berlin</div>
+        <div class="option"><input type="radio" name="q8" value="b"> b) London</div>
+        <div class="option"><input type="radio" name="q8" value="c"> c) Ottawa</div>
+        <div class="option"><input type="radio" name="q8" value="d"> d) Rome</div>
+    </div>
+    <div class="question-container">
+        <div class="question">9. What is the capital of Canada?</div>
+        <div class="option"><input type="radio" name="q9" value="a"> a) Berlin</div>
+        <div class="option"><input type="radio" name="q9" value="b"> b) London</div>
+        <div class="option"><input type="radio" name="q9" value="c"> c) Ottawa</div>
+        <div class="option"><input type="radio" name="q9" value="d"> d) Rome</div>
+    </div>
+    <div class="question-container">
+        <div class="question">10. What is the capital of Canada?</div>
+        <div class="option"><input type="radio" name="q10" value="a"> a) Berlin</div>
+        <div class="option"><input type="radio" name="q10" value="b"> b) London</div>
+        <div class="option"><input type="radio" name="q10" value="c"> c) Ottawa</div>
+        <div class="option"><input type="radio" name="q10" value="d"> d) Rome</div>
+    </div>
+    <input type="submit" value="Submit">
+</form>
+<div id="scoreDisplay"></div>
+<div id="timer"></div>
+<button id="tryAgainBtn" style="display:none;">Try Again</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var timer;
+        var seconds = 120; 
+        var maxScore = 10; 
+
+        function startTimer() {
+            timer = setInterval(function() {
+                seconds--;
+                $('#timer').text('Time remaining: ' + seconds + ' seconds');
+
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    $('#quizForm').submit();
+                }
+            }, 1000);
+        }
+
+        $('#quizForm').submit(function(e) {
+            e.preventDefault(); 
+
+            var score = 0;
+
+            
+            $('.question-container').each(function(index) {
+                var selectedOption = $(this).find('input[type="radio"]:checked').val();
+                var correctOption = $(this).find('input[type="radio"][value="c"]').val(); 
+
+                if (selectedOption === correctOption) {
+                    score++;
+                }
+            });
+
+            
+            var timeBonus = Math.floor((seconds / 120) * maxScore); 
+            score += timeBonus;
+
+            
+            $('#scoreDisplay').text('Your score is: ' + score + ' out of ' + (maxScore + timeBonus));
+
+            $('#tryAgainBtn').show();
+        });
+
+        $('#tryAgainBtn').click(function() {
+            $('#quizForm')[0].reset();
+            $('#scoreDisplay').text('');
+            $('#timer').text('');
+            $('#tryAgainBtn').hide();
+            seconds = 120;
+            startTimer();
+        });
+
+        startTimer();
+    });
+</script>
+</body>
+</html>

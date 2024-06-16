@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+    
+    <div style="height: 50px; width:100px; background-color: pink;">
+    <p>Hello</p>
+    <p>Hi There</p>
+    </div>
+    <button id="btn">Click</button>
+    <script> 
+        // $("#btn").click(function(){
+        //     $("div").remove();
+        // });
+        $("#btn").click(function(){
+            $("div").empty();
+        });
+     </script>
+</body>
+</html>

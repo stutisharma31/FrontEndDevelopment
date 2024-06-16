@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Lovely Professional University</h1>
+    <h2><a href='#'>click me</a></h2>
+    <h3><img src='https://th.bing.com/th/id/OIP.6gyb39GkAMgOt29OP382dwHaEK?pid=ImgDet&rs=1' height='300' width='300'></h3>
+    <button id="b1">Get text of h1</button>
+    <button id="b2">Get hyperlink in h2</button>
+    <button id="b3">Get image in h3</button>
+    <button id="b4">Change image</button>
+    <script>
+        $("#b1").click(function(){
+            alert($("h1").text());
+
+        })
+        $("#b2").click(function(){
+            alert($("h2").html());
+        })
+        $("#b3").click(function(){
+            alert($("h3").html());
+        })
+        $("#b4").click(function(){
+            ($("img").attr("src","https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg"));
+        })
+    </script>
+</body>
+</html>

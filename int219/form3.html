@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+    
+    <div class="outer">
+        <div class="inner">
+            <form name="myForm" onsubmit="return (validation());">
+                <h2 style="text-align: center;">Don't have an account?! Want to join us?!</h2>
+                <p>
+                    <label for="name">Name</label>
+                    <br>
+                    <input type="text" name="name" placeholder="First Name Last Name">
+                    <span id="errorname" class="error"></span>
+                </p>
+                <p>
+                    <label for="email">Email ID </label>
+                    <br>
+                    <input type="email" name="email" placeholder="Email ID">
+                    <span id="erroremail" class="error"></span>
+                </p>
+                <p>
+                    <label for="city">Select city</label>
+                    
+                    <br>
+                    <select name="select" id="select">
+                    <option value="Select">Select</option>
+                        <option value="panipat">panipat</option>
+                        <option value="jalandhar">jalandhar</option>
+                        <option value="karnal">karnal</option>
+                        <option value="ambala">amabala</option>
+                        
+                    </select>
+                    <span id="errorcity" class="error"></span>
+                    
+                </p>
+                <p>
+                
+                <p>
+                    <label>Gender :</label>
+                    <br>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender">
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender">
+                <label for="other">Other</label>
+                <input type="radio" id="other" name="gender">
+                <span id="errorgender" class="error"></span>
+                </p>
+
+               
+                <p>
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" name="password" placeholder="Password">
+                    <span id="errorpassword" class="error"></span>
+                    
+                </p>
+                <p>
+                    
+                </p>
+                <p>
+                    <input type="checkbox" name="checkbox">
+                    <label for="checkbox">I agree to the terms and conditions</label>
+                    <span id="errorcheck" class="error"></span>
+                </p>
+                <p>
+                    
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </p>
+
+            </form>
+            
+
+        </div>
+        <script type="text/javascript">
+            function validation(){
+                var isValid=true;
+                if(document.myForm.name.value == ""){
+                    document.getElementById("errorname").innerHTML="Name cannot be left blank";
+                    isValid =false;
+                }
+                else{
+                    document.getElementById("errorname").innerHTML="";
+                }
+               
+                if(document.myForm.email.value == ""){
+                    document.getElementById("erroremail").innerHTML="Email cannot be left blank";
+                    isValid =false;
+                }
+                else{
+                    document.getElementById("erroremail").innerHTML="";
+                }
+                
+                if(document.myForm.city.value == "Select"){
+                    document.getElementById("errorcity").innerHTML="City cannot be left blank";
+                    isValid =false;
+                }
+                else{
+                    document.getElementById("errorcity").innerHTML="";
+                }
+                if(document.myForm.password.value == ""){
+                    document.getElementById("errorpassword").innerHTML="Password cannot be left blank";
+                    isValid =false;
+                }
+                else{
+                    document.getElementById("errorpassword").innerHTML="";
+                }
+                if(document.myForm.gender.value == ""){
+                    document.getElementById("errorgender").innerHTML="Gender cannot be left blank";
+                    isValid =false;
+                }
+                else{
+                    document.getElementById("errorgender").innerHTML="";
+                }
+                if(document.myForm.checkbox.value == ""){
+                    document.getElementById("errorcheck").innerHTML=" cannot be left blank";
+                    isValid =false;
+                }
+                else{
+                    document.getElementById("errorcheck").innerHTML="";
+                }
+                
+                return isValid;
+            }
+        </script>
+
+    </div >
+
+</body>
+
+</html> 

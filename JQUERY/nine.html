@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        .input-box {
+            background-color: #ffdddd; 
+        }
+        .valid {
+            background-color: #ddffdd; 
+        }
+        
+    </style>
+</head>
+<body>
+    <input id="textbox1" class="input-box" onkeyup="validateInput(this)" onblur="validateInput(this)">
+    <input id="textbox2" class="input-box" onkeyup="validateInput(this)" onblur="validateInput(this)">
+    
+    <script>
+        function validateInput(input) {
+            if (input.value.trim() !== "") {
+                $(input).addClass("valid");
+            } else {
+                $(input).removeClass("valid");
+            }
+        }
+
+        $("#textbox1").mouseover(function(){
+            $("#textbox1").attr({"type":"text"});
+        });
+        $("#textbox2").mouseover(function(){
+            $("#textbox2").attr({"type":"text"});
+        });
+    </script>
+</body>
+</html>

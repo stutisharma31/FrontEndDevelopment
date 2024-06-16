@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        let student={
+            name:"Stuti",
+            address:"Delhi",
+            cgpa:7.9
+        }
+
+    // let student1=JSON.stringify(student);
+    
+    // document.write(student1)
+    // console.log(student1);
+    // document.write("Name: "+student.name+"<br>")
+    // document.write("Address: "+student.address+"<br>")
+    // document.write("CGPA: "+student.cgpa+"<br>")
+
+    // document.write("Name: "+student["name"]+"<br>")
+    // document.write("Address: "+student["address"]+"<br>")
+    // document.write("CGPA: "+student["cgpa"]+"<br>")
+    // for(let key in student){
+    //     document.write(key+"<br>");
+    // }
+    // for(let key in student){
+    //     document.write(student[key]+"<br>");
+    // }
+    // let newValue=Object.values(student);
+    // newValue.forEach(values=>{
+    //     document.write(values+"<br>");
+    // })
+    console.log(student);
+    var student1=JSON.parse(student);
+    console.log(student1)
+    </script>
+</body>
+</html>
+
+
+<!-- create a form for railway reservation.when the user enter the values in the form elements, the values should be visible on the web page in the form of json after clicking on the submit button. -->

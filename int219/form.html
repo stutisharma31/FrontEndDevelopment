@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner">
+            <form name="myForm" onsubmit="return validation();">
+                <h2 style="text-align: center;">Don't have an account?! Want to join us?!</h2>
+                <p>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="First Name Last Name">
+                    <span id="errorname" class="error"></span>
+                </p>
+                <p>
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" placeholder="Email ID">
+                    <span id="erroremail" class="error"></span>
+                </p>
+                <p>
+                    <label for="city">Select city</label>
+                    <select name="city" id="city">
+                        <option value="panipat">Select</option>
+                        <option value="panipat">panipat</option>
+                        <option value="jalandhar">jalandhar</option>
+                        <option value="karnal">karnal</option>
+                        <option value="ambala">amabala</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Gender :</label>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender">
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender">
+                    <label for="other">Other</label>
+                    <input type="radio" id="other" name="gender">
+                    <span id="errorgender" class="error"></span>
+                </p>
+                <p>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password">
+                    <span id="errorpassword" class="error"></span>
+                </p>
+                <p>
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">I agree to the terms and conditions</label>
+                    <span id="errorcheck" class="error"></span>
+                </p>
+                <p>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </p>
+            </form>
+        </div>
+        <script type="text/javascript">
+            function validation() {
+                var isValid = true;
+                if (document.myForm.name.value == "") {
+                    document.getElementById("errorname").innerHTML = "Name cannot be left blank";
+                    isValid = false;
+                } else {
+                    document.getElementById("errorname").innerHTML = "";
+                }
+                return isValid;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

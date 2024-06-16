@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Quiz</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Custom Quiz</h1>
+    <div id="quiz-container">
+        <!-- Questions will be generated here using JavaScript -->
+    </div>
+    <button id="submit-btn" class="btn btn-primary">Submit</button>
+    <button id="try-again-btn" class="btn btn-primary" style="display: none;">Try Again</button>
+    <div id="score" class="score"></div>
+    <div id="timer" class="timer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // JavaScript to handle quiz logic will go here
+
+        // Define your questions and answers here
+        const questions = [
+            {
+                question: "What is the capital of France?",
+                options: ["Berlin", "London", "Paris", "Rome"],
+                answer: "Paris"
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                options: ["Venus", "Mars", "Jupiter", "Saturn"],
+                answer: "Mars"
+            },
+            {
+                question: "What is the largest mammal in the world?",
+                options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+                answer: "Blue Whale"
+            },
+            {
+                question: "What is the chemical symbol for water?",
+                options: ["H2O", "CO2", "O2", "NaCl"],
+                answer: "H2O"
+            }
+        ];
+
+        // Your JavaScript code for generating questions, handling responses, and implementing the timer goes here
+
+    </script>
+</body>
+</html>

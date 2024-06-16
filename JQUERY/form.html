@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation Form</title>
+</head>
+<body>
+
+<h1>Railway Reservation Form</h1>
+
+<form id="reservationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="train">Train name:</label>
+    <input type="text" id="train" name="train"><br><br>
+
+    <label for="date">Date of travel:</label>
+    <input type="date" id="date" name="date"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<div id="jsonOutput">
+    <h2>JSON Output</h2>
+    <pre id="output"></pre>
+</div>
+
+<script>
+document.getElementById('reservationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var formData = new FormData(this);
+    var jsonObject = {};
+
+    formData.forEach(function(value, key){
+        jsonObject[key] = value;
+    });
+
+    document.getElementById('output').textContent = JSON.stringify(jsonObject, null, 2);
+});
+</script>
+
+</body>
+</html>

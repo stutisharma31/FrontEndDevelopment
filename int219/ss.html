@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .input-box {
+    width: 200px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid;
+  }
+</style>
+<script>
+function validateInput(inputElement) {
+  if (inputElement.value.trim() === '') {
+    inputElement.style.backgroundColor = 'red';
+  } else {
+    inputElement.style.backgroundColor = 'green';
+  }
+}
+</script>
+</head>
+<body>
+
+<input id="textbox1" class="input-box" onkeyup="validateInput(this)" onblur="validateInput(this)">
+<input id="textbox2" class="input-box" onkeyup="validateInput(this)" onblur="validateInput(this)">
+
+</body>
+</html>

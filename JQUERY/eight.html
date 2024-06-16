@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+ 
+</head> 
+<body> 
+ 
+<input type="text" name="username"><br> 
+<input type="password" name="password"><br> 
+<input type="radio" value="male"> 
+<input type="radio" value="female"><br> 
+ 
+<select name="cities" id="cities"> 
+  <option value="Mumbai">Mumbai</option> 
+  <option value="Delhi">Delhi</option> 
+  <option value="Noida">Noida</option> 
+  <option value="Bangalore">Bangalore</option> 
+</select> 
+ 
+<br> 
+ 
+<textarea name="message" style="width:100px; height:100px;"> 
+</textarea> 
+ 
+<br> 
+ 
+<input type="checkbox" value="check"> <br> 
+<button type="button">button type button</button> 
+<input type="button" value="input type button"> 
+<input type="reset" value="Reset"> 
+<input type="submit" value="Submit"> 
+ 
+ 
+<script> 
+$(document).ready(function(){ 
+//   $("input").css("background-color", "pink"); 
+  $(":input").css("background-color", "pink"); 
+}) 
+</script> 
+ 
+ 
+</body> 
+</html>

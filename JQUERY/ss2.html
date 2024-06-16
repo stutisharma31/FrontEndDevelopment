@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+  .input-box {
+    width: 200px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid;
+  }
+</style>
+<script>
+$(document).ready(function(){
+  $('.input-box').on('keyup blur', function() {
+    if ($(this).val().trim() === '') {
+      $(this).css('background-color', 'red');
+    } else {
+      $(this).css('background-color', 'green');
+    }
+  });
+});
+</script>
+</head>
+<body>
+
+<input id="textbox1" class="input-box">
+<input id="textbox2" class="input-box">
+
+</body>
+</html>

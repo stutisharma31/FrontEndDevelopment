@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" id="btn">
+    <input type="submit" id="button" value="Submit" disabled="disabled">
+    
+    <script>
+        $("#btn").mouseover(function(){
+            $("#btn").attr({"type":"text","value":""});
+            $("#button").prop("disabled", true);
+        });
+        $("#button").mouseover(function(){
+            $("#button").attr({"type":"submit","value":"Submit"});
+            $("#button").prop("disabled", false);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Enlarge on Mouseover</title>
+<style>
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+
+  #enlargeImage {
+    width: 300px;
+    height: 300px;
+    transition: all 0.3s ease-in-out;
+  }
+</style>
+</head>
+<body>
+<div id="container">
+  <img id="enlargeImage" src="https://th.bing.com/th/id/R.c35b0899237e00d146c0cdebefb78a66?rik=gNIBjCBEnSIWFA&riu=http%3a%2f%2fhappenings.lpu.in%2fwp-content%2fuploads%2f2019%2f06%2fLPU-Campus-5.jpg&ehk=w3IeQJhuBo6kVUT%2f8uuIp5J32q4Bek83Fap%2biUkpCqA%3d&risl=&pid=ImgRaw&r=0" alt="Enlarging Image">
+</div>
+
+<script>
+  const image = document.getElementById('enlargeImage');
+
+  function enlargeImage() {
+    image.style.transform = 'scale(1.8)';
+  }
+
+  function shrinkImage() {
+    image.style.transform = 'scale(0.5)';
+  }
+
+  image.addEventListener('mouseover', enlargeImage);
+  image.addEventListener('mouseout', shrinkImage);
+</script>
+</body>
+</html>

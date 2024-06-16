@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <html>
+  <style>
+    .wrapper {
+      height: 50vh;
+      width:20vw;
+      border: 2px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button {
+      padding: 2vh;
+    }
+  </style>
+
+  <div class="wrapper" onclick="baby()">
+    <button id="btn" onclick="wwe()">Submit</button>
+  </div>
+
+  <script>
+    function baby() {
+      let d = document.querySelector(".wrapper");
+      let p = document.querySelector("#btn");
+
+      d.style.backgroundColor = "red";
+    }
+    function wwe() {
+      let d = document.querySelector(".wrapper");
+      let p = document.querySelector("#btn");
+      console.log(p);
+
+      p.style.backgroundColor = "green";
+    }
+  </script>
+</html>
+
+<!-- Event bubbling and event capturing is important  -->
+    
+</body>
+</html>

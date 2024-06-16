@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button id="b1">Set Value</button>
+    <button id="b2">Clear value</button>
+    <script>
+        $("#b1").click(function(){
+            $("input").val("Hello");
+        });
+        $("#b2").click(function(){
+            $("input").val("");
+        })
+
+    </script>
+    
+</body>
+</html>

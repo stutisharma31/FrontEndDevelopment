@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.jss"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-gray-800 text-white grid justify-center">
+    <div class="main flex flex-col space-y-3">
+      <input type="text" id="input" class="bg-gray-600 p-2 rounded-md" />
+      <button
+        class="text-white border border-white p-1 rounded-md hover:bg-slate-200 hover:text-black"
+        type="submit"
+        id="btn"
+        disabled="true"
+      >
+        Submit Now
+      </button>
+    </div>
+  </body>
+
+  <script>
+    $(document).ready(() => {
+      $("#input").on("input", () => {
+        if ($("#input").val() != "") {
+          $("#btn").removeAttr("disabled");
+        } else {
+          $("#btn").attr("disabled", "true");
+        }
+      });
+
+      $("#btn").click(() => {
+        alert("Hi");
+      });
+    });
+  </script>
+</html>

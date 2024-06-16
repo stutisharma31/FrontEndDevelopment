@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h2 id="text"></h2>
+    <button onclick="run()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <script>
+        const text = document.getElementById("text");
+        let id;
+        const run = () => {
+             id=setInterval(()=>{text.innerText=Date();},1000)
+        }
+        const stop=()=>{
+            clearInterval(id)
+            
+        
+        }
+    </script>
+</body>
+</html>

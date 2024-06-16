@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="submit" value="Add" onclick="add()">
+    <input type="submit" value="Subtract" onclick="subtract()">
+    <input type="submit" value="Multiply" onclick="multiply()">
+    <input type="submit" value="Divide" onclick="divide()">
+    <h1 id="result" style="color:crimson"></h1>
+    
+    <script>
+        function add(){
+        var num1=Number(document.getElementById("num1").value);
+        var num2=Number(document.getElementById("num2").value);
+        var sum=num1+num2;
+        // document.write("The addition of two numbers is"+sum);
+        document.getElementById("result").innerHTML="The addition of two numbers is "+ sum+"<br>"
+        }
+        function subtract(){
+        var num1=Number(document.getElementById("num1").value);
+        var num2=Number(document.getElementById("num2").value);
+        var sum1=num1-num2;
+        // document.write("The subtraction of two numbers is"+sum1);
+        document.getElementById("result").innerHTML="The subtraction of two numbers is "+ sum1+"<br>"
+        }
+        function multiply(){
+        var num1=Number(document.getElementById("num1").value);
+        var num2=Number(document.getElementById("num2").value);
+        var sum2=num2*num1;
+        // document.write("The multiplication of two numbers is"+sum2);
+        document.getElementById("result").innerHTML="The multiplication of two numbers is "+ sum2+"<br>"
+        }
+        function divide(){
+        var num1=Number(document.getElementById("num1").value);
+        var num2=Number(document.getElementById("num2").value);
+        var sum3=num2/num1;
+        // document.write("The division of two numbers is"+sum3);
+        document.getElementById("result").innerHTML="The division of two numbers is "+ sum3+"<br>"
+        }
+
+
+
+     </script>
+</body>
+</html>
